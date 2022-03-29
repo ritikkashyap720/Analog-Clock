@@ -1,0 +1,87 @@
+body{
+  
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+:root {
+  --primary-color: #000;
+  --secondary-color: #fff;
+}
+
+html {
+  transition: all 0.5s ease-in;
+}
+
+html.dark {
+  --primary-color: #fff;
+  --secondary-color: #333;
+}
+
+html.dark {
+  background-color: #111;
+  color: var(--primary-color);
+}
+.clock-container{
+    width: max-content;
+    margin: auto;
+}
+.A-clock{
+    height: 400px;
+    width: 200px;
+    /* background-color: aqua; */
+}
+.D-clock{
+    text-align: center;
+}
+.time{
+    font-size: 65px;
+    margin: 20px 0px;
+}
+.date{
+    font-size: 19px;
+    margin: 0px;
+    opacity: 0.5;
+    
+}
+.needle {
+    background-color: var(--primary-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 65px;
+    width: 3px;
+    transform-origin: bottom center;
+    transition: all 0.5s ease-in;
+  }
+  
+  .needle.hour {
+    transform: translate(-50%, -100%) rotate(0deg);
+  }
+  .needle.min {
+    transform: translate(-50%, -100%) rotate(0deg);
+    height: 100px;
+  }
+  
+  .needle.sec {
+    transform: translate(-50%, -100%) rotate(0deg);
+    height: 100px;
+    background-color: #e74c3c;
+  }
+ 
+  .theme-changer{
+    border: none;
+    background:  transparent  ;
+    color: var(--primary-color);
+    position: absolute;
+    right: 0px;    
+  }
+  .theme-changer:hover{
+
+    cursor: pointer;
+  }
